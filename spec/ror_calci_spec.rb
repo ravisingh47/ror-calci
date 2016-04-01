@@ -9,9 +9,24 @@ describe RorCalci do
       expect(RorCalci::VERSION).not_to be nil
     end
 
-    it 'performs performs basic additon' do
+    it 'performs basic additon' do
       expect(RorCalci.basic_calci.add(integer_1, integer_2))
         .to eq(integer_1 + integer_2)
+    end
+
+    it 'performs basic subtraction' do
+      expect(RorCalci.basic_calci.sub(integer_1, integer_2))
+        .to eq(integer_1 - integer_2)
+    end
+
+    it 'performs basic multiplication' do
+      expect(RorCalci.basic_calci.mul(integer_1, integer_2))
+        .to eq(integer_1 * integer_2)
+    end
+
+    it 'performs basic division' do
+      expect(RorCalci.basic_calci.div(integer_1, integer_2))
+        .to eq(integer_1 / integer_2)
     end
   end
 end
